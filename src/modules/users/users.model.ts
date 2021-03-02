@@ -6,11 +6,24 @@ export const UserSchema = new Schema(
   {
     password: {
       type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    surName: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: String,
       default: null,
     },
-    email: String,
-    firstName: String,
-    lastName: String,
   },
   { timestamps: true },
 )

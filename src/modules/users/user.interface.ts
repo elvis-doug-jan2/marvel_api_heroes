@@ -8,3 +8,8 @@ export interface IUser extends Document {
   recoveryToken: string
   changeToken: string
 }
+
+export interface IUserCreated {
+  success: boolean
+  message: string
+}
