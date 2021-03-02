@@ -5,12 +5,17 @@ export class UserDTO {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
+  password: string
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
   name: string
 
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  surname: string
+  surName: string
 
   @ApiProperty()
   @IsNotEmpty()
@@ -18,7 +23,6 @@ export class UserDTO {
   email: string
 
   @ApiPropertyOptional()
-  @IsNotEmpty()
   @IsString()
   @IsOptional()
   phone: string

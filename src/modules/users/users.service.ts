@@ -1,18 +1,25 @@
 import { Injectable } from '@nestjs/common'
-import { IsUppercase } from 'class-validator'
-import { UserDTO } from './user.dto'
-import { IUserCreated } from './user.interface'
+import { createdSuccessResponseDTO } from 'src/utils/successCreated.util.dto'
+import { UserRepository } from './user.repository'
+import { UserDTO } from './users.dto'
 
 @Injectable()
 export class UsersService {
-  getHello(): string {
-    return 'Modulo users!'
+  constructor(private readonly userRepository: UserRepository) {}
+
+  async createNewUser(userData: UserDTO): Promise<createdSuccessResponseDTO | Error> {
+    return this.userRepository
+      .create(userData)
+      .then(() => ({
+        success: true,
+        message: 'User created successfully!',
+      }))
+      .catch((error) => {
+        throw new Error(error)
+      })
   }
 
-  async createNewUser(userData: UserDTO): Promise<IUserCreated> {
-    return {
-      message: 'DEU BOM',
-      success: true,
-    }
+  async getAllUsers(): Promise<UserDTO[]> {
+    return this.userRepository.getAll()
   }
 }

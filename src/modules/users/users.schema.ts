@@ -1,6 +1,7 @@
+import { isEAN } from 'class-validator'
 import { Schema } from 'mongoose'
 import { encrypt, decrypt } from '../../utils/criptPass.util'
-import { IUser } from './user.interface'
+import { IUser } from './users.interface'
 
 export const UserSchema = new Schema(
   {
@@ -12,7 +13,7 @@ export const UserSchema = new Schema(
       type: String,
       required: true,
     },
-    firstName: {
+    name: {
       type: String,
       required: true,
     },

@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger'
 import { IsBoolean, IsString } from 'class-validator'
 
-export class createdSuccessResponse {
+export class createdSuccessResponseDTO {
   @ApiProperty()
   @IsBoolean()
   success: boolean

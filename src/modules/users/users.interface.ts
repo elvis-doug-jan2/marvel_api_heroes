@@ -3,10 +3,9 @@ import { Document } from 'mongoose'
 export interface IUser extends Document {
   password: string
   email: string
-  firstName: string
-  lastName: string
-  recoveryToken: string
-  changeToken: string
+  name: string
+  surName: string
+  phone: string
 }
 
 export interface IUserCreated {
