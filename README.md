@@ -25,3 +25,31 @@ O projeto está em fase inicial, infelizmente não chegou a ser implementado os 
 ```/v1/api/``` (para documentação Swagger)<br />
 
 **Obs:** Apenas o cadastro e consulta de usuário está funcionando.
+
+Rota: ```/v1/users/```<br />
+ * POST:<br />
+```json
+{
+	"name": "User",
+	"surName": "User sobrenome",
+	"password": "123456",
+	"email": "user@email.com",
+	"phone": "44999001456"
+}
+```
+ * GET:<br />
+ Response:<br />
+```json
+[
+  {
+    "_id": "603da2810d97f3011f162839",
+    "phone": "44999001456",
+    "name": "User",
+    "surName": "User sobrenome",
+    "email": "user@email.com",
+    "createdAt": "2021-03-02T02:27:13.298Z",
+    "updatedAt": "2021-03-02T02:27:13.298Z",
+    "__v": 0
+  }
+]
+```
