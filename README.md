@@ -18,7 +18,7 @@ Para executar o projeto tenha o **docker** em sua máquina (caso estiver no Linu
 Para subir o projeto:<br />
 ```yarn docker-up```
 
-O projeto está em fase inicial, infelizmente não chegou a ser implementado os recursos que foram pedidos. As rotas disponíveis são:
+O projeto está em fase inicial, infelizmente não chegou a ser implementado os recursos que foram pedidos. As rotas disponíveis são:<br />
 ```/v1/heroes/```<br />
 ```/v1/users/```<br />
 ```/v1/auth/```<br />
